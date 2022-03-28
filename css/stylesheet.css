@@ -75,6 +75,9 @@ a {
 .pos-rel{
   position: relative;
 }
+.overflow{
+  overflow: hidden;
+}
 /*heading*/
 .heading{
   font-size: 36px;
@@ -171,7 +174,6 @@ a {
   background: #0c69c0;
   background: linear-gradient(180deg, rgba(12,105,192,1) 0%, rgba(4,30,120,1) 64%, rgba(4,28,118,1) 100%);
   position: relative;
-  overflow: hidden;
   display: grid;
   grid-template-columns: auto auto;
   justify-content: space-between;
@@ -191,7 +193,7 @@ a {
   position: absolute;
   width: 1px;
   height: 30px;
-  right: 0px;
+  right: -3px;
   top: 0px;
   bottom: 0px;
   margin: auto;
@@ -205,16 +207,42 @@ a {
   padding: 12px 25px;
   display: block;
 }
+.c-nav .box ul li:nth-child(5) a svg{
+  display: none;
+}
+.c-nav .box ul li a:hover{
+  background: rgb(0 0 0 / 15%);
+}
 .c-nav .box ul li a svg{
   width: 11px;
   height: 13px;
+}
+.c-nav .box ul li .dropdown-menu{
+  background: #041c76;
+}
+.c-nav .box ul li .dropdown-menu li{
+  display: block;
+}
+.c-nav .box ul li .dropdown-menu li a{
+  padding: 6px 25px;
+  font-size: 14px;
+}
+.c-nav .box ul li .dropdown-menu li::after{
+  width: 0px;
+}
+.c-nav .box ul li .dropdown-menu li a:hover{
+
 }
 .c-nav .estimate-btn{
   color: white;
   font-size: 14px;
   font-weight: 500;
   padding: 13px 36px;
+  padding-left: 44px;
   position: relative;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  overflow: hidden;
 }
 .c-nav .estimate-btn::after{
   content: '';
@@ -224,7 +252,7 @@ a {
   width: calc(100% + 10px);
   height: 100%;
   top: 0px;
-  left: 0px;
+  left: 9px;
   transform: skewX(-20deg);
 }
 .c-nav .estimate-btn span{
@@ -829,7 +857,7 @@ body.lock {
                 color: #0f338d;
                 width: 12px;
               }
-              .mbl-nav .box ul.collapse{
+              .mbl-nav .box ul.drop{
                 padding: 6px 40px;
                 background-color: #f5f5f5;
                 border-bottom: 2px solid #0f338d;
@@ -838,7 +866,7 @@ body.lock {
                 padding-left: 18px;
                 padding-right: 0px;
               }
-              .mbl-nav .box ul.collapse li a{
+              .mbl-nav .box ul.drop li a{
                 padding: 5px 0px;
               }
               .mbl-nav .box .categ{
@@ -918,6 +946,7 @@ body.lock {
   display: grid;
   grid-template-columns: auto 1fr;
   column-gap: 26px;
+  line-height: 20px;
 }
 .text-page ul li::before{
   content: '';
@@ -925,7 +954,7 @@ body.lock {
   height: 13px;
   background: #c90501;
   border-radius: 11px;
-  margin-top: 6px;
+  margin-top: 4px;
 }
 .text-page ul li:last-child{
   margin: 0px;
@@ -1272,17 +1301,16 @@ body.lock {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 60px;
-  text-align: center;
 }
 .product .product-icon .box{
 
 }
 .product .product-icon .box img{
-  width: 117px;
+  width: 70px;
+  border: 1px solid #c9c9c9;
   margin-bottom: 20px;
 }
 .product .product-icon .box .big{
-  text-align: center;
   text-transform: uppercase;
   font-weight: 600;
   color: var(--red);
@@ -1290,7 +1318,6 @@ body.lock {
   margin-bottom: 8px;
 }
 .product .product-icon .box .disc{
-  text-align: center;
   font-size: 15px;
   line-height: 19px;
 }
@@ -1308,4 +1335,183 @@ body.lock {
 }
 .product-grid .box .bx img{
   width: 100%;
+}
+/*service-det*/
+.service-det{
+  display: grid;
+  grid-template-columns: 1fr 31%;
+  column-gap: 36px;
+}
+.service-det .left{
+
+}
+.service-det .left p{
+  font-size: 17px;
+}
+.service-det .left h1{
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--blue);
+  margin-bottom: 5px;
+}
+.service-det .left ul{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  column-gap: 53px;
+  text-align: justify;
+}
+.service-det .left ul li{
+  
+}
+.service-det .right{
+  background-color: #10338d;
+  position: relative;
+}
+.service-det .right::before{
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: #10338d;
+  position: absolute;
+  top: -40%;
+}
+.service-det .right::after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: #10338d;
+  position: absolute;
+  bottom: -40%;
+}
+.service-det .right .blue-box{
+  padding: 0px 12px;
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-rows: auto auto;
+  align-items: stretch;
+  height: 100%;
+  text-align: center;
+}
+.service-det .right .blue-box .coup{
+
+}
+.service-det .right .blue-box .coup img{
+  width: 100%;
+  margin-top: -19px;
+  margin-bottom: 24px;
+}
+.service-det .right .blue-box .btn-appoint{
+  background: rgb(141,3,2);
+  background: linear-gradient(90deg, rgba(141,3,2,1) 0%, rgba(209,5,1,1) 50%, rgba(140,4,1,1) 100%);
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  display: inline-block;
+  padding: 10px 31px;
+  border-radius: 28px;
+}
+.service-gallery{
+  padding: 46px 0px;
+}
+.service-gallery .box{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 45px;
+  align-items: center;
+}
+.service-gallery .box .left{
+
+}
+.service-gallery .box .left h1{
+  color: var(--red);
+  font-weight: 900;
+  font-size: 100px;
+  line-height: 70px;
+  margin-top: -12px;
+}
+.service-gallery .box .left h1 span{
+  display: block;
+  color: var(--blue);
+  font-size: 60px;
+  margin-left: 3px;
+}
+.service-gallery .box .right{
+
+}
+.service-gallery .box .right img{
+  width: 100%;
+}
+.relevant-grid{
+  background-color: var(--blue);
+}
+.relevant-grid h1{
+  text-align: center;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 27px;
+  margin-top: -4px;
+}
+.relevant-grid .box{
+
+}
+.relevant-grid .box .bx{
+
+}
+.relevant-grid .box .bx img{
+  background-color: white;
+}
+/*coupens*/
+.coup-box{
+  margin-top: -24px;
+}
+.coup-box .coup-boxs{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 13px;
+  row-gap: 8px;
+}
+.coup-box .coup-boxs img{
+  width: 100%;
+}
+.coup-box .right{
+  background-color: #c40912;
+}
+.coup-box .right::before,
+.coup-box .right::after{
+  background-color: #c40912;
+}
+.coup-box .blue-box .active-coup{
+
+}
+.coup-box .blue-box .active-coup h3{
+  color: #f3ee00;
+  font-weight: 700;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.coup-box .blue-box .active-coup ul{
+  border-top: 1px solid #fff;
+}
+.coup-box .blue-box .active-coup ul li{
+  display: block;
+  border-bottom: 1px solid #fff;
+  margin: 0px;
+}
+.coup-box .blue-box .active-coup ul li a{
+  color: white;
+  display: block;
+  padding: 13px 0px;
+}
+.order{
+  margin-top: 20px;
+  background-color: #fdfdfd;
+}
+.order iframe{
+  width: 80%;
+  height: 100vh;
+  margin: auto;
+  display: block;
 }

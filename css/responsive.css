@@ -93,6 +93,7 @@
     .c-nav .estimate-btn{
         font-size: 13px;
         padding: 12px 30px;
+        padding-left: 38px;
     }
     .c-jumbo .box{
         left: 10%;
@@ -386,6 +387,36 @@
     .product-grid .box{
         column-gap: 10px;
     }
+    /*service detail*/
+    .service-det .left h1 {
+        font-size: 25px;
+    }
+    .service-gallery {
+        padding: 35px 0px;
+    }
+    .service-gallery .box .left h1{
+        font-size: 89px;
+        line-height: 65px;
+    }
+    .service-gallery .box .left h1 span{
+        font-size: 55px;
+    }
+    .relevant-grid h1{
+        font-size: 26px;
+        margin-bottom: 16px;
+    }
+    /*coupon*/
+    .coup-box .blue-box .active-coup h3{
+        font-size: 24px;
+        margin-bottom: 11px;
+    }
+    .coup-box .blue-box .active-coup ul{
+        margin-top: 0px;
+    }
+    .coup-box .blue-box .active-coup ul li a{
+        padding: 9px 0px;
+        font-size: 15px;
+    }
 }
 @media (min-width: 0px) and (max-width: 769px) {
     /*home*/
@@ -639,7 +670,7 @@
     .text-page ul li::before {
         width: 10px;
         height: 10px;
-        margin-top: 6px;
+        margin-top: 4px;
     }
     .about .left h1 {
         font-size: 18px;
@@ -771,6 +802,57 @@
     .product-grid .box {
         column-gap: 7px;
     }
+    /*service det*/
+    .service-det{
+        grid-template-columns: 1fr 34%;
+        column-gap: 30px;
+    }
+    .service-det .left p {
+        font-size: 15px;
+    }
+    .service-det .left h1 {
+        font-size: 18px;
+        margin-bottom: 1px;
+    }
+    .service-det .left ul{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .service-det .left ul li {
+        line-height: 16px;
+    }
+    .service-det .right .blue-box .coup img{
+        margin-bottom: 30px;
+    }
+    .service-det .right .blue-box .btn-appoint{
+        font-size: 13px;
+    }
+    .service-gallery {
+        padding: 26px 0px;
+    }
+    .service-gallery .box .left h1 {
+        font-size: 60px;
+        line-height: 42px;
+    }
+    .service-gallery .box .left h1 span {
+        font-size: 42px;
+    }
+    .relevant-grid h1 {
+        font-size: 21px;
+        margin-bottom: 13px;
+    }
+    /*coupon*/
+    .coup-box {
+        margin-top: -18px;
+    }
+    .coup-box .blue-box .active-coup h3 {
+        font-size: 18px;
+        margin-bottom: 7px;
+    }
+    .coup-box .blue-box .active-coup ul li a{
+        padding: 9px 0px;
+        font-size: 14px;
+    }
 }
 @media (min-width: 0px) and (max-width: 569px) {
     .container-sm {
@@ -794,6 +876,7 @@
     .c-nav .estimate-btn {
         font-size: 12px;
         padding: 10px 25px;
+        padding-left: 32px;
     }
     .mbl-nav-opener {
         font-size: 14px;
@@ -1018,7 +1101,7 @@
         font-size: 11px;
     }
     .mbl-nav .box{
-        width: 80%;
+        width: 90%;
     }
     .mbl-nav .box .head{
         padding: 26px 25px;
@@ -1201,7 +1284,7 @@
     }
     /*prodcut*/
     .product h1{
-        font-size: 17px;
+        font-size: 16px;
         margin-bottom: 15px;
         font-weight: 600;
         padding: 0px 50px;
@@ -1227,6 +1310,81 @@
         column-gap: 10px;
         row-gap: 10px;
         grid-template-columns: repeat(2, 1fr);
+    }
+    /*servis*/
+    .service-det{
+        grid-template-columns: 1fr;
+        row-gap: 28px;
+    }
+    .service-det .left p {
+        font-size: 13px;
+    }
+    .service-det .left h1 {
+        font-size: 15px;
+        margin-bottom: 3px;
+    }
+    .service-det .left ul{
+        grid-template-columns: 1fr;
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+    .service-det .left ul li{
+        margin-bottom: 5px;
+    }
+    .service-det .right::before,
+    .service-det .right::after{
+        content: none;
+    }
+    .service-det .right {
+        border-radius: 16px;
+        overflow: inherit;
+    }
+    .service-det .right .blue-box {
+        padding: 6px 9px;
+    }
+    .service-det .right .blue-box .coup img {
+        margin-bottom: 14px;
+    }
+    .service-det .right .blue-box .btn-appoint{
+        margin-bottom: 8px;
+    }
+    .service-gallery {
+        padding: 20px 0px;
+        padding-top: 5px;
+    }
+    .service-gallery .box{
+        grid-template-columns: 1fr;
+        row-gap: 13px;
+    }
+    .service-gallery .box .left h1 {
+        font-size: 25px;
+        line-height: 27px;
+        text-align: center;
+    }
+    .service-gallery .box .left h1 span{
+        font-size: inherit;
+        display: inline-block;
+        margin-right: 5px;
+    }
+    .service-gallery .box .right img{
+        border-radius: 14px;
+    }
+    .relevant-grid h1 {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+    /*coupon*/
+    .coup-box .blue-box .active-coup ul li:last-child{
+        border: 0px;
+    }
+    .coup-box .blue-box .active-coup h3 {
+        font-size: 17px;
+        margin-bottom: 7px;
+        margin-top: 5px;
+    }
+    .coup-box .coup-boxs{
+        column-gap: 8px;
+        row-gap: 6px;
     }
 }
 @media (min-width: 0px) and (max-width: 360px) {
