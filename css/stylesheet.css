@@ -827,6 +827,7 @@ body.lock {
   -o-transition: opacity .25s ease-in-out .25s;
   transition: opacity .25s ease-in-out .25s;
   left: -100%;
+  top: 0px;
 }
   .mbl-nav .box {
     position: absolute;
