@@ -1402,6 +1402,8 @@ body.lock {
   position: relative;
   border-top-left-radius: 14px;
   border-top-right-radius: 14px;
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
 }
 .service-det .right::before{
   content: none;
@@ -1412,7 +1414,7 @@ body.lock {
   top: -40%;
 }
 .service-det .right::after{
-  content: '';
+  content: none;
   width: 100%;
   height: 100%;
   background: #10338d;
